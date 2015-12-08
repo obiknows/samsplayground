@@ -4,13 +4,14 @@ var reload       = browserSync.reload;
 var harp         = require('harp');
 var cp           = require('child_process');
 var deploy       = require('gulp-gh-pages');
+var addsrc       = require('gulp-add-src');
 
 /*
  * Serve the Harp Site from the src directory
  */
 gulp.task('serve', function () {
   harp.server(__dirname + "/src", {
-    port: 9000,
+    port: 9000
   }, function () {
      browserSync({
       proxy: "localhost:9000",
@@ -29,7 +30,7 @@ gulp.task('serve', function () {
     /** 
      * Watch for all other changes, reload the whole page
      */
-    gulp .watch(["*.html", "*.ejs", "*.jade", "*.js", "*.json", "*.md"], function () {
+    gulp.watch(["*.html", "*.ejs", "*.jade", "*.js", "*.json", "*.md"], function () {
       reload();
     });
   } )
@@ -45,7 +46,7 @@ gulp.task('default', ['serve']);
  * builds the harp site
  */
 gulp.task('build', function (done) {
-  cp.exec('harp compile . src', {stdio: 'inherit'})
+  cp.exec('harp compile src ./gh-pages', {stdio: 'inherit'})
     .on('close', done)
 });
 
@@ -55,8 +56,9 @@ gulp.task('build', function (done) {
 var ghPages = {
 	remoteUrl : "https://github.com/samnnodim/samnnodim.github.io",
 	branch : "master"
-};
+}; 
 gulp.task('deploy',['build'], function () {
-  return gulp.src("./src/**/*")
+  return gulp.src("./gh-pages/**/*")
+		.pipe(addsrc("./README.md"))
     .pipe(deploy(ghPages))
 });
