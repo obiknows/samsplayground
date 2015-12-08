@@ -1,0 +1,19 @@
+{
+  "name": "sams-personal-site",
+  "version": "1.0.0",
+  "description": "personal site, what you thought..?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samnnodim/samsplayground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samnnodim/samsplayground/issues"
+  },
+  "homepage": "https://github.com/samnnodim/samsplayground#readme"
+}
