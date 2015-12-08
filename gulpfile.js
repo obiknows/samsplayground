@@ -9,8 +9,8 @@ var deploy       = require('gulp-gh-pages');
  * Serve the Harp Site from the src directory
  */
 gulp.task('serve', function () {
-  harp.server(__dirname, {
-    port: 9000
+  harp.server(__dirname + "/src", {
+    port: 9000,
   }, function () {
      browserSync({
       proxy: "localhost:9000",
