@@ -7,6 +7,12 @@ var deploy       = require('gulp-gh-pages');
 var addsrc       = require('gulp-add-src');
 
 /*
+ * Default task, running `gulp` will fire up the Harp site,
+ * launch BrowserSync & watch files.
+ */ 
+gulp.task('default', ['serve']);
+
+/*
  * Serve the Harp Site from the src directory
  */
 gulp.task('serve', function () {
@@ -35,12 +41,6 @@ gulp.task('serve', function () {
     });
   } )
 }) ;
-
-/*
- * Default task, running `gulp` will fire up the Harp site,
- * launch BrowserSync & watch files.
- */ 
-gulp.task('default', ['serve']);
 
 /*
  * builds the harp site
