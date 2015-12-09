@@ -2,4 +2,10 @@
 
 ### The Site
 
-Built using [harp](//harpjs.com) + [gulp](//gulpjs.com) + [BrowserSync](//browsersync.io)
+Built using [harp][harp] + [gulp][gulp] + [BrowserSync][BS]
+
+[harp]: <http://harpjs.com/>
+[gulp]: <http://gulpjs.com/>
+[BS]:   <http://www.browsersync.io/>
+
+
