@@ -9,7 +9,7 @@ var addsrc       = require('gulp-add-src');
 /*
  * Default task, running `gulp` will fire up the Harp site,
  * launch BrowserSync & watch files.
- */ 
+ */
 gulp.task('default', ['serve']);
 
 /*
@@ -33,13 +33,13 @@ gulp.task('serve', function () {
     gulp.watch(["*.css", "*.sass", "*.scss", "*.less"], function () {
       reload("main.css", {stream: true});
     });
-    /** 
+    /**
      * Watch for all other changes, reload the whole page
      */
     gulp.watch(["*.html", "*.ejs", "*.jade", "*.js", "*.json", "*.md"], function () {
       reload();
     });
-  } )
+  });
 }) ;
 
 /*
@@ -56,7 +56,7 @@ gulp.task('build', function (done) {
 var ghPages = {
 	remoteUrl : "https://github.com/samnnodim/samnnodim.github.io",
 	branch : "master"
-}; 
+};
 gulp.task('deploy',['build'], function () {
   return gulp.src("./gh-pages/**/*")
 		.pipe(addsrc("./README.md"))

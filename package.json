@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/samnnodim/samsplayground#readme",
   "devDependencies": {
+    "bower": "^1.7.1",
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",

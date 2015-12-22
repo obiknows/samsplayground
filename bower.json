@@ -1,0 +1,25 @@
+{
+  "name": "sams-personal-site",
+  "description": "personal site, what you thought..?",
+  "main": "index.js",
+  "authors": [
+    "Sam Nnodim <sam.nnodim@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "personal",
+    "site"
+  ],
+  "homepage": "https://github.com/samnnodim/samsplayground",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.9"
+  }
+}
