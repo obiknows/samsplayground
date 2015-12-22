@@ -1,12 +1,13 @@
 //
-// Main LESS file
+// Main SASS file
 // --------------------------------------------------------
 
-// Paths
-//@bower: "../bower_components";
+// Imports
+@import "variables";
 
 // Bower Components
-//@import "@{bower}/susy/sass/susy";
+@import "../../bower_components/susy/sass/susy"; //
+
 
 body{
   font-family: "Helvetica";
