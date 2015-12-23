@@ -6,14 +6,39 @@
 @import "variables";
 
 // Bower Components
-@import "../../bower_components/susy/sass/susy"; //
+@import "../../bower_components/susy/sass/susy";      // Susy
+
+//
+// SUSY
+//
+/* Changing Susy default global settings */
+$susy: (
+  /* Tells Susy to use 12 columns */
+  columns: 12,
+  /* Tells Susy that the container has a max-width of 1120px */
+  container: 1120px,
+  /* Tells Susy to use border-box */
+  global-box-sizing: border-box
+  );
+
+/* Makes border-box properties */
+@include border-box-sizing;
+
+
+.page {
+  @include container;
+  // Mobile styles
+
+  // Desktop styles
+
+}
 
 
 body{
   font-family: "Helvetica";
   text-align: center;
   padding: 50px 20px 0;
-  background: #6c6c6c;
+  background: #3c3c3c;
   color: #f4f4f7;
   margin: 0;
 }
